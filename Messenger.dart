@@ -30,15 +30,27 @@ class Note extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-            elevation: 0,
-            title: const Text('dddd'),
-            leading: Container(
-              width: 100,
-              margin: const EdgeInsets.only(left: 20),
-              height: 100,
-              decoration: const BoxDecoration(
-                  shape: BoxShape.circle, color: Colors.grey),
-            )),
+          toolbarHeight: 100,
+          backgroundColor: Colors.lightBlue,
+          elevation: 0,
+          title: const Text(
+            '바늘이',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          leading: Container(
+            height: 100,
+            width: 100,
+            margin: const EdgeInsets.fromLTRB(20, 20, 0, 20),
+            decoration: const BoxDecoration(
+              color: Colors.grey,
+              shape: BoxShape.circle,
+            ),
+          ),
+          leadingWidth: 100,
+        ),
         body: Column(
           verticalDirection: VerticalDirection.up,
           children: [
