@@ -54,27 +54,42 @@ class Note extends StatelessWidget {
         body: Column(
           verticalDirection: VerticalDirection.up,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: SizedBox(
-                height: 50.0,
-                width: 400.0,
+            Container(
+              height: 60,
+              width: 410,
+              alignment: Alignment.center,
+              color: Colors.green,
+              child: Container(
+                height: 40,
+                width: 410,
+                padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
+                alignment: Alignment.center,
                 child: TextField(
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.grey[200],
-                    suffixIcon: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.arrow_upward,
-                        color: Colors.blue,
+                    fillColor: Colors.grey[100],
+                    suffixIcon: Container(
+                      width: 40,
+                      height: 10,
+                      alignment: Alignment.center,
+                      padding: const EdgeInsets.all(0),
+                      child: const Material(
+                        elevation: 0,
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.all(Radius.circular(100)),
+                        child: Icon(Icons.arrow_upward, color: Colors.white),
                       ),
                     ),
+                    suffixIconColor: Colors.blue,
                     hintText: '여기를 터치해서 메시지를 보내세요',
+                    hintStyle: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey,
+                    ),
                     enabledBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(100)),
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Colors.grey,
                       ),
                     ),
                   ),
