@@ -52,13 +52,44 @@ class Note extends StatelessWidget {
           leadingWidth: 100,
         ),
         body: Column(
-          verticalDirection: VerticalDirection.up,
           children: [
             Container(
-              height: 60,
-              width: 410,
-              alignment: Alignment.center,
-              color: Colors.green,
+              alignment: Alignment.topLeft,
+              height: 499,
+              color: Colors.lightBlue,
+              child: Column(
+                verticalDirection: VerticalDirection.down,
+                children: [
+                  Container(
+                    height: 50,
+                    width: 120,
+                    margin: const EdgeInsets.only(left: 280),
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(10),
+                            bottomLeft: Radius.circular(10))),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(right: 260),
+                    height: 50,
+                    width: 120,
+                    decoration: const BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(10),
+                            bottomRight: Radius.circular(10))),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              height: 60.2,
+              width: 411,
+              alignment: Alignment.bottomCenter,
+              color: Colors.white,
               padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
               child: TextField(
                 decoration: InputDecoration(
